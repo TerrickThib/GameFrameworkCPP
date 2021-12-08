@@ -1,6 +1,7 @@
 #pragma once
 class Transform2D;
 class Collider;
+class Component;
 
 class Actor
 {
@@ -76,6 +77,11 @@ public:
     /// <param name="other">The actor this actor collided with.</param>
     virtual void onCollision(Actor* other);
 
+    Component* addComponent(Component*);
+    bool removeComponent(Component*);
+    bool removeComponent(const char*);
+    Component* getComponent(const char*);
+
 protected:
     const char* m_name;
 
@@ -83,5 +89,9 @@ private:
     bool m_started;
     Transform2D* m_transform;
     Collider* m_collider;
+
+    Component** m_comp;
+    int m_componentCount;
+
 };
 

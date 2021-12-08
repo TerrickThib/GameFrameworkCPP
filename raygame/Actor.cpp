@@ -31,6 +31,26 @@ void Actor::onCollision(Actor* other)
 {
 }
 
+Component* Actor::addComponent(Component*)
+{
+	return nullptr;
+}
+
+bool Actor::removeComponent(Component*)
+{
+	return false;
+}
+
+bool Actor::removeComponent(const char*)
+{
+	return false;
+}
+
+Component* Actor::getComponent(const char*)
+{
+	return nullptr;
+}
+
 void Actor::update(float deltaTime)
 {
 }
