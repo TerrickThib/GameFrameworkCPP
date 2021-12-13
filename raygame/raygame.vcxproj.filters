@@ -15,6 +15,9 @@
     <Filter Include="Colliders">
       <UniqueIdentifier>{56481e87-ef41-4936-b790-c539c9b95d77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{a3fc64f5-020d-45cf-93a0-5aa50f3fff7a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -38,9 +41,6 @@
     <ClCompile Include="ActorArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="MoveComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
@@ -49,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="CircleCollider.cpp">
       <Filter>Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +79,6 @@
     <ClInclude Include="ActorArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MoveComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
@@ -82,5 +88,25 @@
     <ClInclude Include="CircleCollider.h">
       <Filter>Colliders</Filter>
     </ClInclude>
+    <ClInclude Include="SpriteComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Assesment2\Images\player.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="..\..\Assesment2\Images\enemy.png">
+      <Filter>Images</Filter>
+    </Image>
+    <Image Include="..\..\Assesment2\Images\bullet.png">
+      <Filter>Images</Filter>
+    </Image>
   </ItemGroup>
 </Project>

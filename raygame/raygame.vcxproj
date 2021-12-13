@@ -154,8 +154,10 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainScene.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Transform2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -166,9 +168,18 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="MainScene.h" />
     <ClInclude Include="MoveComponent.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Assesment2\Images\bullet.png" />
+    <Image Include="..\..\Assesment2\Images\enemy.png" />
+    <Image Include="..\..\Assesment2\Images\player.png">
+      <DeploymentContent>false</DeploymentContent>
+    </Image>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

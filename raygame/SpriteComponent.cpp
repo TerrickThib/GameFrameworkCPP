@@ -37,7 +37,7 @@ void SpriteComponent::draw()
 
 	//Off sets the sprite to makes the sprite line up with owner in the center. Change the position of the sprite to be in the center of the transform
 	position = position - (forward * getWidth() / 2);
-	position = position - (up * getHeight() / 2);
+	position = position - (up.getNormalized() * getHeight() / 2);
 
 	//Change the position vector to be a raylib vector
 	RAYLIB_H::Vector2 rayPos = { position.x, position.y };
