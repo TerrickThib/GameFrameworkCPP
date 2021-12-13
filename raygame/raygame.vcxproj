@@ -174,13 +174,6 @@
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Transform2D.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\Assesment2\Images\bullet.png" />
-    <Image Include="..\..\Assesment2\Images\enemy.png" />
-    <Image Include="..\..\Assesment2\Images\player.png">
-      <DeploymentContent>false</DeploymentContent>
-    </Image>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
