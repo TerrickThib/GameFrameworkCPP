@@ -43,6 +43,11 @@ Component* Actor::addComponent(Component* component)
 
     //Set the last value in the new array to be the actor we want to add
     appendedArray[m_componentCount] = component;
+    if (m_componentCount > 1)
+        delete[]m_components;
+    else if (m_componentCount == 1)
+        delete[]m_components;
+
     //Set the old array to hold the values of the new array
     m_components = appendedArray;    
     m_componentCount++;
@@ -77,6 +82,7 @@ bool Actor::removeComponent(Component* component)
    
     if (componentRemoved)
     {
+        delete[] m_components;
         //Set the old array to the new array
         m_components = newArray;
         m_componentCount--;        
