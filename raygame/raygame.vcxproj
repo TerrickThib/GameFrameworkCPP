@@ -167,7 +167,6 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="MoveComponent.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Transform2D.h" />
   </ItemGroup>

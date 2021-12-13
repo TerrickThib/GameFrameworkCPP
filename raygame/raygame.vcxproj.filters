@@ -9,6 +9,12 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{31b398a9-2033-4e0c-a070-e4764f6703a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Colliders">
+      <UniqueIdentifier>{56481e87-ef41-4936-b790-c539c9b95d77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -26,12 +32,6 @@
     <ClCompile Include="Collider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CircleCollider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AABBCollider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Transform2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,10 +39,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Component.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="MoveComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="AABBCollider.cpp">
+      <Filter>Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>Colliders</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -58,12 +64,6 @@
     <ClInclude Include="Collider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CircleCollider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AABBCollider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Transform2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -73,11 +73,14 @@
     <ClInclude Include="Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MoveComponent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="AABBCollider.h">
+      <Filter>Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>Colliders</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

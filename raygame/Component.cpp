@@ -2,42 +2,21 @@
 
 Component::Component()
 {
+	m_owner = nullptr;
+	m_name = nullptr;
+	m_started = false;
 }
 
-Component::Component(Actor*, const char*)
+void Component::assignOwner(Actor* owner)
 {
+	if (getOwner())
+		return;
+
+	m_owner = owner;
 }
 
-Component::~Component()
-{
+Component::Component(const char* name)
+{	
+	m_name = name;
 }
 
-const char* Component::getName()
-{
-	return nullptr;
-}
-
-Actor* Component::getOwner()
-{
-	return nullptr;
-}
-
-void Component::start()
-{
-}
-
-void Component::update(float)
-{
-}
-
-void Component::draw()
-{
-}
-
-void Component::end()
-{
-}
-
-void Component::onCollision(Actor*)
-{
-}
