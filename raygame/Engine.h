@@ -4,6 +4,7 @@
 #include <cmath>
 #include "ActorArray.h"
 class Camera2D;
+class ActorArray;
 
 static class Engine
 {
@@ -109,7 +110,7 @@ private:
     static bool m_applicationShouldClose;
     static Scene** m_scenes;
     static int m_sceneCount;
-    static ActorArray m_actorsToDelete;
+    static ActorArray** m_actorsToDelete;
     static int m_currentSceneIndex;
     static const int m_screenWidth = 700;
     static const int m_screenHeight = 800;
