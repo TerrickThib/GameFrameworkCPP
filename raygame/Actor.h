@@ -133,12 +133,12 @@ inline T* Actor::getComponent()
     for (int i = 0; i < m_componentCount; i++)
     {
         //Return 
-        if (dynamic_cast<T*>(m_components[i]))
-        {
-            //Return the component that is the same as the curent
-            if(temp)
-                return (T*)m_components[i];
-        }
+        T* temp = dynamic_cast<T*>(m_components[i]);
+        
+        //Return the component that is the same as the curent
+        if(temp)
+           return (T*)m_components[i];
+       
     }
     return nullptr;
 }

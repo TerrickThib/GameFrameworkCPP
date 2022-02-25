@@ -4,7 +4,7 @@
 Scene::Scene()
 {
     m_actorCount = 0;
-    m_actors = ActorArray();
+    m_actors = DynamicArray();
     m_world = new MathLibrary::Matrix3();
 }
 

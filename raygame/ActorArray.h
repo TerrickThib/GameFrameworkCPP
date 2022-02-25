@@ -1,4 +1,5 @@
 #pragma once
+#include <exception>
 class Actor;
 
 template <typename T>
@@ -19,6 +20,15 @@ public:
 	T getItem(int index);
 
 	int getLength() { return m_length; }
+
+	/// <summary>
+	/// Checks if the item is in the array
+	/// </summary>
+	/// <param name="item">A reference to the item to use to check</param>
+	/// <returns>False if the item is not in the array</returns>
+	bool contains(T item);
+
+	T operator[](int index);
 
 private:
 	T* m_items;
@@ -60,7 +70,20 @@ inline void DynamicArray<T>::addItem(T item)
 template<typename T>
 inline void DynamicArray<T>::addItems(T item[], int size)
 {
+	T* tempArray = new T[getLength() + size];
 
+	int j = 0;
+	for (int i = 0; i < getLength(); i++) {
+		tempArray[j] = m_items[i];
+		j++;
+	}
+	for (int i = 0; i < size; i++) {
+		tempArray[j] = item[i];
+		j++;
+	}
+
+	m_length += size;
+	m_items = tempArray;
 }
 
 template<typename T>
@@ -130,3 +153,28 @@ inline T DynamicArray<T>::getItem(int index)
 
 	return m_items[index];
 }
+
+template<typename T>
+inline bool DynamicArray<T>::contains(T value)
+{
+	//Iterate through item array
+	for (int i = 0; i < m_length; i++)
+	{
+		//return the current item if it matches the argument
+		if (m_items[i] == value)
+			return true;
+	}
+
+	return false;
+}
+
+template<typename T>
+inline T DynamicArray<T>::operator[](int index)
+{
+	if (index > 0 || index < getLength()) {
+		return m_items[index];
+	}
+
+	throw std::exception("Index was outside the bounds of the array.");
+}
+
